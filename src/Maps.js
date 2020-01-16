@@ -11,7 +11,6 @@ import Autocomplete from "react-google-autocomplete";
 
 import { SearchBox } from "react-google-maps/lib/components/places/SearchBox";
 
-
 class Map extends Component {
 
   constructor( props ) {
@@ -71,6 +70,7 @@ class Map extends Component {
 
   render() {
 
+    const gcp_key=process.env.REACT_APP_GCP_KEY;
     let map;
 
     const AsyncMap = withScriptjs(
@@ -115,7 +115,7 @@ class Map extends Component {
     map = <div>
 
       <AsyncMap
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyB3reYSBXlW8MbjUGlROwc4cv-tGeQCfCY`}
+        googleMapURL={gcp_key}
 
         loadingElement={
           <div style={{ height: `100%` }} />
