@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import Map from './Maps';
+
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: '100px' }}>
+      <Map
+        center={{lat: 3.040020, lng: 101.579231}}
+        height='500px'
+        zoom={15}
+      />
     </div>
   );
+
 }
 
 export default App;
